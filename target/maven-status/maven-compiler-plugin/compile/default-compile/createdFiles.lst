@@ -1,0 +1,8 @@
+com/training/user/controller/LoginController.class
+com/training/user/dao/UserDaoImpl.class
+com/training/user/service/UserService.class
+com/training/user/model/User.class
+com/training/user/dao/UserMapper.class
+com/training/user/model/Login.class
+com/training/user/controller/RegistrationController.class
+com/training/user/dao/UserDao.class
