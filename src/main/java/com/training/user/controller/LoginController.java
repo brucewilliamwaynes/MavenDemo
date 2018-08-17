@@ -2,6 +2,8 @@ package com.training.user.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -40,10 +42,13 @@ public class LoginController {
 		  User user = userService.validateUser(login);
 	    
 		  if (null != user) {
-	    
-			  mav = new ModelAndView("welcome");
-	    
-			  mav.addObject("firstname", user.getFirstname());
+			  
+			  HttpSession session = request.getSession();
+			  
+			  session.setAttribute("user", user.getFirstname());
+			  
+			  return new ModelAndView("redirect:/welcome");
+			  
 	    } 
 		  else {
 	    

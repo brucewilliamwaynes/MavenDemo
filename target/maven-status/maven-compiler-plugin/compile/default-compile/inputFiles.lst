@@ -1,6 +1,8 @@
+/home/bridgelabz/anirban/MavenDemo/src/main/java/com/training/user/service/UserServiceImpl.java
 /home/bridgelabz/anirban/MavenDemo/src/main/java/com/training/user/service/UserService.java
 /home/bridgelabz/anirban/MavenDemo/src/main/java/com/training/user/dao/UserDaoImpl.java
 /home/bridgelabz/anirban/MavenDemo/src/main/java/com/training/user/dao/UserDao.java
+/home/bridgelabz/anirban/MavenDemo/src/main/java/com/training/user/controller/WelcomeController.java
 /home/bridgelabz/anirban/MavenDemo/src/main/java/com/training/user/controller/RegistrationController.java
 /home/bridgelabz/anirban/MavenDemo/src/main/java/com/training/user/model/User.java
 /home/bridgelabz/anirban/MavenDemo/src/main/java/com/training/user/model/Login.java

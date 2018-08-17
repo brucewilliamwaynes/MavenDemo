@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context-3.0.xsd">
     
-    <context:component-scan base-package="com.training.user" />
+    <context:component-scan base-package="com.training.user.controller" />
     
     <context:annotation-config />
     
@@ -10,9 +10,9 @@
         <property name="suffix" value=".jsp" />
     </bean>
     
-    <bean id="userService" class="jbr.springmvc.service.UserServiceImpl" />
+    <bean id="userService" class="com.training.user.service.UserServiceImpl" />
     
-    <bean id="userDao" class="jbr.springmvc.dao.UserDaoImpl" />
+    <bean id="userDao" class="com.training.user.dao.UserDaoImpl" />
     
     <bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />

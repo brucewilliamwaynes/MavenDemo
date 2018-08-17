@@ -45,6 +45,7 @@ public class UserDaoImpl implements UserDao{
 	    );
 	    
 	  }
+	  
 	    public User validateUser(Login login) {
 	    	
 	    String sql = "select * from users where username='" + login.getUsername() + "' and password='" + login.getPassword() + "'";

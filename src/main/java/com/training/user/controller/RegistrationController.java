@@ -34,7 +34,7 @@ public class RegistrationController {
 	  
 		  userService.register(user);
 	  
-		  return new ModelAndView("welcome", "firstname", user.getFirstname());
+		  return new ModelAndView("login","message"," Succesfullu Registered " + user.getFirstname());
 	 
 	  }
 
