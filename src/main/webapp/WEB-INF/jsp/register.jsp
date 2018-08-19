@@ -19,6 +19,9 @@
                         <td>
                             <form:input path="username" name="username" id="username" />
                         </td>
+                        <td>
+                        	<form:errors path="username"></form:errors>
+                        </td>
                     </tr>
                     <tr>
                         <td>
@@ -26,6 +29,9 @@
                         </td>
                         <td>
                             <form:password path="password" name="password" id="password" />
+                        </td>
+                        <td>
+                        	<form:errors path="password"></form:errors>
                         </td>
                     </tr>
                     <tr>
@@ -35,6 +41,9 @@
                         <td>
                             <form:input path="firstname" name="firstname" id="firstname" />
                         </td>
+                        <td>
+                        	<form:errors path="firstname"></form:errors>
+                        </td>
                     </tr>
                     <tr>
                         <td>
@@ -42,6 +51,9 @@
                         </td>
                         <td>
                             <form:input path="lastname" name="lastname" id="lastname" />
+                        </td>
+                        <td>
+                        	<form:errors path="lastname"></form:errors>
                         </td>
                     </tr>
                     <tr>
@@ -51,6 +63,9 @@
                         <td>
                             <form:input path="email" name="email" id="email" />
                         </td>
+                        <td>
+                        	<form:errors path="email"></form:errors>
+                        </td>
                     </tr>
                     <tr>
                         <td>
@@ -59,6 +74,9 @@
                         <td>
                             <form:input path="address" name="address" id="address" />
                         </td>
+                        <td>
+                        	<form:errors path="address"></form:errors>
+                        </td>
                     </tr>
                     <tr>
                         <td>
@@ -66,6 +84,9 @@
                         </td>
                         <td>
                             <form:input path="phone" name="phone" id="phone" />
+                        </td>
+                        <td>
+                        	<form:errors path="phone"></form:errors>
                         </td>
                     </tr>
                     <tr>

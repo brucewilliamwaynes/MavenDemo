@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -15,7 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class WelcomeController {
 	
-	private static final Logger logger = org.apache.logging.log4j.LogManager.getLogger(WelcomeController.class);
+	private static final Logger logger = LogManager.getLogger(WelcomeController.class);
 	
 	@RequestMapping("/welcome")
 	public ModelAndView showWelcome(HttpServletRequest req, HttpServletResponse resp){
