@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
+import com.training.user.model.EmailID;
 import com.training.user.model.Login;
 import com.training.user.model.User;
 
@@ -64,6 +65,17 @@ public class UserDaoImpl implements UserDao{
 			List< User > users = jdbcTemplate.query (  query , new UserMapper() );
 			
 			return users.size() > 0 ? true : false;
+		}
+
+		public User findUser(EmailID emailID) {
+			// find User with current Email ID
+			
+			String query = "select * from users where email = '" + emailID.getEmailID() + "';";
+			
+			List< User > users = jdbcTemplate.query(query, new UserMapper() );
+			
+			return users.size() > 0 ? users.get(0) : null;
+			
 		}
 	    
 	  }
