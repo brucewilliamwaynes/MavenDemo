@@ -2,6 +2,7 @@ package com.training.user.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,7 +30,17 @@ public class ResetPasswordController {
 		
 		if( null != currentUser  ){
 			
+			HttpSession newSession = request.getSession();
 			
+			newSession.setAttribute( "username" , currentUser.getUsername() );
+			
+			return new ModelAndView( "createPassword" , "message" , "Welcome " + currentUser.getUsername() );
+			
+		}
+		
+		else {
+			
+			mav = new ModelAndView( "redirect:/forgetPassword" , "message" , " Invalid Link."  );
 			
 		}
 		
@@ -38,4 +49,19 @@ public class ResetPasswordController {
 		
 	}
 	
+	@RequestMapping( value = "/savePassword" , method = RequestMethod.POST )
+	public ModelAndView savePassword( HttpServletRequest request , HttpServletResponse response  ) {
+		
+		ModelAndView mav = null;
+		
+		String username = request.getSession().getAttribute( "username" ).toString();
+		
+		userService.savePassword( username , request.getAttribute( "password" ).toString() );
+		
+		mav = new ModelAndView( "redirect:/home" , "message" , "Passowrd Successfully Changed!" );
+		
+		return mav;
+		
+	}
+
 }

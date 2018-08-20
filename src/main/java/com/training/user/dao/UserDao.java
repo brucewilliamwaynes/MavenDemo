@@ -25,4 +25,6 @@ public interface UserDao {
 
 	User searchFromToken(String token);
 
+	void savePassword(String username, String newPassword);
+
 }

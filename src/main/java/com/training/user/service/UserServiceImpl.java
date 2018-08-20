@@ -102,5 +102,15 @@ public class UserServiceImpl implements UserService{
 		
 	}
 
+	public void savePassword(String username, String newPassword) {
+		// Save new Password for user
+		
+		userDao.savePassword( username , newPassword );
+		
+	}
+
+
+
+
 	
 }

@@ -16,4 +16,7 @@ public interface UserService {
 
 	User getUser(String token);
 
+	void savePassword(String username , String newPassword );
+
+
 }
