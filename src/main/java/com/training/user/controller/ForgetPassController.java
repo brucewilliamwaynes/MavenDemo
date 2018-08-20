@@ -62,15 +62,24 @@ public class ForgetPassController {
 			if( userService.emailIDExists(emailID) ) {
 				//Redirect to where we reset password via java mail
 				
-				logger.error( "Successfully Logged in"  );
+				logger.error( "Email exists."  );
+				
+				mav = new ModelAndView("forgetPassword","message", "Yes you are registered with us! We send you reset password link on your registered email!" );
+				
+				if( userService.forgotPasswordReset(emailID) ) {
+					
+					
+					
+				}
 				
 			}
 			
 			else {
 				
-				logger.error( "Wrong Email ID , doesn't exists !" );
+				logger.error( "Wrong Email ID entered wrong !" );
 
-				mav = new ModelAndView("forgetPassword");
+				mav = new ModelAndView("forgetPassword" , "message" , "Email ID isn't registered with us" );
+				
 				
 			}
 			

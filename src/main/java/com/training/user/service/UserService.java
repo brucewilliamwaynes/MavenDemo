@@ -12,4 +12,6 @@ public interface UserService {
 
 	boolean emailIDExists(EmailID emailID);
 
+	boolean forgotPasswordReset(EmailID emailID);
+
 }

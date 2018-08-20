@@ -25,8 +25,13 @@
                             <form:button id="resetPassword" name="resetPassword">Reset Password</form:button>
                         </td>
                     </tr>
-                    
                 </table>
             </form:form>
+            
+            <table align="center">
+                <tr>
+                    <td style="font-style: italic; color: red;">${message}</td>
+                </tr>
+            </table>
 </body>
 </html>
