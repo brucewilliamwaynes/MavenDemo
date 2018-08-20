@@ -101,7 +101,7 @@ public class UserDaoImpl implements UserDao{
 		public void savePassword(String username, String newPassword) {
 			// Update new Password To DB
 			
-			String query = "update users set password = '" + newPassword + "', token = NULL where username = '" + username + "';";
+			String query = "update users set password = '" + newPassword + "', token = " + null + "  where username = '" + username + "';";
 			
 			jdbcTemplate.update( query );
 			

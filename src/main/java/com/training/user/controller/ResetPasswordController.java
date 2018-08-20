@@ -50,7 +50,7 @@ public class ResetPasswordController {
 	}
 	
 	@RequestMapping( value = "/savePassword" , method = RequestMethod.POST )
-	public ModelAndView savePassword( HttpServletRequest request , HttpServletResponse response  ) {
+	public ModelAndView savePassword(@RequestParam ("password") String password ,  HttpServletRequest request , HttpServletResponse response  ) {
 		
 		ModelAndView mav = null;
 		

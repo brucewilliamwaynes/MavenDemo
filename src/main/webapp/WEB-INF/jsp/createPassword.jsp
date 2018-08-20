@@ -25,7 +25,7 @@
                             <label >New Password : </label>
                         </td>
                         <td>
-                            <input  name="password" id="password" type="text" />
+                            <input  name="password" id="password" type="password" />
                         </td>
                         <td>
                         </td>
