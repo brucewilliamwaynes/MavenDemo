@@ -1,6 +1,9 @@
 com/training/user/controller/LoginController.class
 com/training/user/dao/UserDaoImpl.class
+Utility/EmailUtility.class
+com/training/user/controller/ResetPasswordController.class
 com/training/user/model/User.class
+com/training/user/service/UserServiceImpl$1.class
 com/training/user/model/EmailID.class
 com/training/user/model/Login.class
 com/training/user/controller/RegistrationController.class

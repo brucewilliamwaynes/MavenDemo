@@ -1,9 +1,11 @@
+/home/bridgelabz/anirban/MavenDemo/src/main/java/Utility/EmailUtility.java
 /home/bridgelabz/anirban/MavenDemo/src/main/java/com/training/user/model/EmailID.java
 /home/bridgelabz/anirban/MavenDemo/src/main/java/com/training/user/controller/RegistrationController.java
 /home/bridgelabz/anirban/MavenDemo/src/main/java/com/training/user/model/User.java
 /home/bridgelabz/anirban/MavenDemo/src/main/java/validation/CustomValidator.java
 /home/bridgelabz/anirban/MavenDemo/src/main/java/com/training/user/controller/LoginController.java
 /home/bridgelabz/anirban/MavenDemo/src/main/java/validation/EmailIDValidator.java
+/home/bridgelabz/anirban/MavenDemo/src/main/java/com/training/user/controller/ResetPasswordController.java
 /home/bridgelabz/anirban/MavenDemo/src/main/java/com/training/user/controller/ForgetPassController.java
 /home/bridgelabz/anirban/MavenDemo/src/main/java/com/training/user/service/UserServiceImpl.java
 /home/bridgelabz/anirban/MavenDemo/src/main/java/com/training/user/service/UserService.java

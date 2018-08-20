@@ -21,6 +21,8 @@ public interface UserDao {
 
 	User findUser(EmailID emailID);
 
-	boolean writeToken(String username, String token);
-	
+	void writeToken(EmailID emailID, String token);
+
+	User searchFromToken(String token);
+
 }

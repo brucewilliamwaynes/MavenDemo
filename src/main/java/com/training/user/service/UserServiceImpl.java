@@ -56,11 +56,11 @@ public class UserServiceImpl implements UserService{
 			
 			final String subject = "Reset Password Link";
 			
-			final String token = EmailUtility.createToken( currentUser );
+			String token = EmailUtility.createToken( currentUser );
 			
-			final String redirectURL = "http://localhost:8080/MavenDemo/resetPassword?resetToken=" + token;
+			String redirectURL = "http://localhost:8080/MavenDemo/resetPassword?resetToken=" + token;
 			
-			final String body = " Hey , Please press on the link below to redirect ! \n" + redirectURL;
+			String body = " Hey , Please press on the link below to redirect ! \n" + redirectURL;
 			
 			final String toEmail = currentUser.getEmail();
 			
@@ -85,6 +85,8 @@ public class UserServiceImpl implements UserService{
 			
 			EmailUtility.sendEmail(session, toEmail, subject, body);
 			
+			userDao.writeToken( emailID , token );
+			
 			return true;
 		
 		}
@@ -93,12 +95,12 @@ public class UserServiceImpl implements UserService{
 		
 	}
 
-	public boolean setToken(String username , String token ) {
-		// Writing token to DB
+	public User getUser(String token) {
+		// Get User From Token
 		
-		return userDao.writeToken( username , token );
-			
+		return userDao.searchFromToken( token  );
 		
 	}
+
 	
 }

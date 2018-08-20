@@ -13,12 +13,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.training.user.model.User;
 import com.training.user.service.UserService;
+import com.training.user.service.UserServiceImpl;
 
 public class EmailUtility {
-	
-	
-	@Autowired
-	static UserService userService;
 
 	public static void sendEmail( Session session , String toEmail , String subject , String body ) {
 		
@@ -54,11 +51,8 @@ public class EmailUtility {
 	public static String createToken( User currentUser ) {
 		
 		String token =  UUID.randomUUID().toString();
-		
-		if ( userService.setToken( currentUser.getUsername() , token ) )
-			return token;
-		
-		return null;
+
+		return token;
 		
 	}
 	

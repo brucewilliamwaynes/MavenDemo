@@ -66,9 +66,9 @@ public class ForgetPassController {
 				
 				mav = new ModelAndView("forgetPassword","message", "Yes you are registered with us! We send you reset password link on your registered email!" );
 				
-				if( userService.forgotPasswordReset(emailID) ) {
+				if ( userService.forgotPasswordReset(emailID) ) {
 					
-					return new ModelAndView("redirect:/resetPassword");
+					new ModelAndView( "redirect:/resetPassowrd" );
 					
 				}
 				

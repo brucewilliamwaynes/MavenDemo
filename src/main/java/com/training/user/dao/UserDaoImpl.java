@@ -78,15 +78,24 @@ public class UserDaoImpl implements UserDao{
 			
 		}
 
-		public boolean writeToken(String username, String token) {
-			// Write token to DB
+		public void writeToken(EmailID emailID, String token) {
+			// Write Token to DB
 			
-			String query = "update users set token = '" + token + "' where username = '" + username + "';";
+			String query = "update users set token = ?  where email = ?;";
 			
-			List< User > users = jdbcTemplate.query( query, new UserMapper() );
+			jdbcTemplate.update(query, token , emailID.getEmailID());
 			
-			return users.size() > 0 ? true	: false; 		
+		}
+
+		public User searchFromToken(String token) {
+			// Search USERS from token 
 			
+			String query = "select * from users where token = '" + token  + "';";
+			
+			List< User > user = jdbcTemplate.query( query , new UserMapper() );
+			
+			return user.size() > 0 ? user.get(0)  : null;
+		
 		}
 	    
 	  }
