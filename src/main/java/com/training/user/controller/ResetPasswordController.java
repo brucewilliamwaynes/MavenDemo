@@ -58,7 +58,7 @@ public class ResetPasswordController {
 		
 		userService.savePassword( username , request.getAttribute( "password" ).toString() );
 		
-		mav = new ModelAndView( "redirect:/home" , "message" , "Passowrd Successfully Changed!" );
+		mav = new ModelAndView( "redirect:/home" ) ;
 		
 		return mav;
 		
