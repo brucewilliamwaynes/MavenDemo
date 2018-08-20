@@ -50,9 +50,9 @@ public class UserServiceImpl implements UserService{
 		
 		if( currentUser != null ) {
 			
-			final String fromEmail = "mukherjee.anirbanmukherjee@gmail.com";
+			final String fromEmail = "";
 			
-			final String password = "debasish mukherjee";
+			final String password = "";
 			
 			final String subject = "Reset Password Link";
 			
@@ -62,7 +62,7 @@ public class UserServiceImpl implements UserService{
 			
 			Properties props = new Properties();
 			
-			props.put( "mail.stmp.host" , "smtp.gmail.com" );
+			props.put( "mail.smtp.host" , "smtp.gmail.com" );
 			
 			props.put("mail.smtp.port", "587");
 			
