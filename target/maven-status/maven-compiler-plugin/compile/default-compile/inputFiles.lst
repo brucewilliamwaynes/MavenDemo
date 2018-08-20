@@ -1,10 +1,13 @@
-C:\anirban\JAVATraining\MavenDemo\src\main\java\com\training\user\dao\UserDaoImpl.java
-C:\anirban\JAVATraining\MavenDemo\src\main\java\com\training\user\controller\RegistrationController.java
 C:\anirban\JAVATraining\MavenDemo\src\main\java\com\training\user\dao\UserDao.java
-C:\anirban\JAVATraining\MavenDemo\src\main\java\com\training\user\model\User.java
 C:\anirban\JAVATraining\MavenDemo\src\main\java\com\training\user\controller\WelcomeController.java
+C:\anirban\JAVATraining\MavenDemo\src\main\java\com\training\user\model\EmailID.java
 C:\anirban\JAVATraining\MavenDemo\src\main\java\com\training\user\controller\LoginController.java
-C:\anirban\JAVATraining\MavenDemo\src\main\java\validation\CustomValidator.java
 C:\anirban\JAVATraining\MavenDemo\src\main\java\com\training\user\service\UserServiceImpl.java
 C:\anirban\JAVATraining\MavenDemo\src\main\java\com\training\user\model\Login.java
+C:\anirban\JAVATraining\MavenDemo\src\main\java\com\training\user\dao\UserDaoImpl.java
+C:\anirban\JAVATraining\MavenDemo\src\main\java\com\training\user\controller\ForgetPassController.java
+C:\anirban\JAVATraining\MavenDemo\src\main\java\com\training\user\controller\RegistrationController.java
+C:\anirban\JAVATraining\MavenDemo\src\main\java\com\training\user\model\User.java
+C:\anirban\JAVATraining\MavenDemo\src\main\java\validation\EmailIDValidator.java
+C:\anirban\JAVATraining\MavenDemo\src\main\java\validation\CustomValidator.java
 C:\anirban\JAVATraining\MavenDemo\src\main\java\com\training\user\service\UserService.java

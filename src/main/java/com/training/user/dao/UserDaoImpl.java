@@ -55,6 +55,16 @@ public class UserDaoImpl implements UserDao{
 	    return users.size() > 0 ? users.get(0) : null;
 	    
 	    }
+
+		public boolean emailIDExists(String emailID) {
+			//Check if emailID Exists
+			
+			String query = "select * from users from email = '" + emailID + "';";
+			
+			List< User > users = jdbcTemplate.query (  query , new UserMapper() );
+			
+			return users.size() > 0 ? true : false;
+		}
 	    
 	  }
 

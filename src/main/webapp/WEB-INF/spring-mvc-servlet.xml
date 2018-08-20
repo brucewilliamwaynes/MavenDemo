@@ -26,6 +26,7 @@
     </bean>
 
 	<bean id="customValidator" class="validation.CustomValidator"></bean>
-
+	
+	<bean id="emailIDValidator" class="validation.EmailIDValidator"></bean>
 
 </beans>

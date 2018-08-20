@@ -49,7 +49,7 @@ public class RegistrationController {
 		  
 		  userService.register(user);
 	  
-		  return new ModelAndView("login","message"," Succesfullu Registered " + user.getFirstname());
+		  return new ModelAndView("login","message"," Succesfully Registered " + user.getFirstname());
 	 
 	  }
 
