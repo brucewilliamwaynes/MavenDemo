@@ -59,7 +59,7 @@ public class UserDaoImpl implements UserDao{
 		public boolean emailIDExists(String emailID) {
 			//Check if emailID Exists
 			
-			String query = "select * from users from email = '" + emailID + "';";
+			String query = "select * from users where email = '" + emailID + "';";
 			
 			List< User > users = jdbcTemplate.query (  query , new UserMapper() );
 			

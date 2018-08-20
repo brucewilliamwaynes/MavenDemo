@@ -13,7 +13,7 @@
                 <table align="center">
                     <tr>
                         <td>
-                            <form:label path="emailId">EmailID: </form:label>
+                            <form:label path="emailID">EmailID: </form:label>
                         </td>
                         <td>
                             <form:input path="emailID" name="emailID" id="emailID" />

@@ -36,7 +36,7 @@
                     <tr></tr>
                     <tr>
                         <td><a href="home.jsp">Home</a>
-                        <td><a href="forgetPass">Forget Password</a></td>
+                        <td><a href="forgetPassword">Forget Password</a></td>
                         </td>
                     </tr>
                 </table>

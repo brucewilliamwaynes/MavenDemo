@@ -30,7 +30,7 @@ public class ForgetPassController {
 	
 	private static final Logger logger = LogManager.getLogger( ForgetPassController.class );
 	
-	@RequestMapping(value = "/forgetPass" , method = RequestMethod.GET )
+	@RequestMapping(value = "/forgetPassword" , method = RequestMethod.GET )
 	public ModelAndView showForgetPass( HttpServletRequest request , HttpServletResponse respsonse ) {
 		
 		logger.info( "Inside Forget Password Class");
@@ -40,7 +40,7 @@ public class ForgetPassController {
 	}
 	
 	
-	@RequestMapping(value="/resetPasswordProcess" , method = RequestMethod.POST )
+	@RequestMapping(value="/forgetPassword" , method = RequestMethod.POST )
 	public ModelAndView forgetPassProcess( HttpServletRequest request , HttpServletResponse response , @ModelAttribute ( "emailID" ) EmailID emailID , BindingResult result ) {
 		
 		ModelAndView mav = null;
@@ -62,7 +62,7 @@ public class ForgetPassController {
 			if( userService.emailIDExists(emailID) ) {
 				//Redirect to where we reset password via java mail
 				
-				
+				logger.error( "Successfully Logged in"  );
 				
 			}
 			

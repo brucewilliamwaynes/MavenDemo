@@ -9,7 +9,7 @@
 <title>Forget Password</title>
 </head>
 <body>
-	<form:form id="resetPasswordForm" modelAttribute="emailID" action="resetPasswordProcess" method="post">
+	<form:form id="forgetPasswordForm" modelAttribute="emailID" action="forgetPassword" method="post">
                 <table align="center">
                     <tr>
                         <td>
