@@ -20,5 +20,7 @@ public interface UserDao {
 	boolean emailIDExists(String emailID);
 
 	User findUser(EmailID emailID);
+
+	boolean writeToken(String username, String token);
 	
 }

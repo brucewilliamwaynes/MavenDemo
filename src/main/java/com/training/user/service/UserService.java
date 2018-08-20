@@ -14,4 +14,6 @@ public interface UserService {
 
 	boolean forgotPasswordReset(EmailID emailID);
 
+	boolean setToken(String username , String token );
+
 }

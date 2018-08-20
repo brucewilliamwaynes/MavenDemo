@@ -1,6 +1,7 @@
 package Utility;
 
 import java.util.Date;
+import java.util.UUID;
 
 import javax.mail.Message;
 import javax.mail.Session;
@@ -8,7 +9,16 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.training.user.model.User;
+import com.training.user.service.UserService;
+
 public class EmailUtility {
+	
+	
+	@Autowired
+	static UserService userService;
 
 	public static void sendEmail( Session session , String toEmail , String subject , String body ) {
 		
@@ -40,5 +50,17 @@ public class EmailUtility {
 		
 		
 	}
+	
+	public static String createToken( User currentUser ) {
+		
+		String token =  UUID.randomUUID().toString();
+		
+		if ( userService.setToken( currentUser.getUsername() , token ) )
+			return token;
+		
+		return null;
+		
+	}
+	
 	
 }

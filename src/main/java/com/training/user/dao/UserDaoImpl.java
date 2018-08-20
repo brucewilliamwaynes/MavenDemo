@@ -77,6 +77,17 @@ public class UserDaoImpl implements UserDao{
 			return users.size() > 0 ? users.get(0) : null;
 			
 		}
+
+		public boolean writeToken(String username, String token) {
+			// Write token to DB
+			
+			String query = "update users set token = '" + token + "' where username = '" + username + "';";
+			
+			List< User > users = jdbcTemplate.query( query, new UserMapper() );
+			
+			return users.size() > 0 ? true	: false; 		
+			
+		}
 	    
 	  }
 
