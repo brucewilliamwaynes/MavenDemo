@@ -14,7 +14,7 @@ public class HomeController {
 	@RequestMapping( value = "/home" , method = RequestMethod.GET )
 	public ModelAndView showHome( HttpServletRequest request , HttpServletResponse response  ) {
 		
-		String username = request.getSession().getAttribute( "username" ).toString();
+		String username = (String )request.getSession().getAttribute( "username" );
 			
 		return new ModelAndView( "home" , "message" , "Password Successfully updated for " + username );
 		

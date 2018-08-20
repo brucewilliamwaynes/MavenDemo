@@ -54,9 +54,9 @@ public class ResetPasswordController {
 		
 		ModelAndView mav = null;
 		
-		String username = request.getSession().getAttribute( "username" ).toString();
+		String username = (String )request.getSession().getAttribute( "username" );
 		
-		userService.savePassword( username , request.getAttribute( "password" ).toString() );
+		userService.savePassword( username , (String) request.getAttribute( "password" ) );
 		
 		mav = new ModelAndView( "redirect:/home" ) ;
 		

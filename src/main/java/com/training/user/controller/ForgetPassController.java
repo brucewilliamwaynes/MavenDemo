@@ -68,7 +68,9 @@ public class ForgetPassController {
 				
 				if ( userService.forgotPasswordReset(emailID) ) {
 					
-					new ModelAndView( "redirect:/resetPassowrd" );
+					logger.error( "Redirecting"  );
+					
+					return  new ModelAndView( "redirect:/home" );
 					
 				}
 				

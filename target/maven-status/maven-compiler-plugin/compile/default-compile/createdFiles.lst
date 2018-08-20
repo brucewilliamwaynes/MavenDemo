@@ -11,6 +11,7 @@ validation/EmailIDValidator.class
 com/training/user/service/UserService.class
 com/training/user/dao/UserMapper.class
 validation/CustomValidator.class
+com/training/user/controller/HomeController.class
 com/training/user/controller/ForgetPassController.class
 com/training/user/service/UserServiceImpl.class
 com/training/user/controller/WelcomeController.class

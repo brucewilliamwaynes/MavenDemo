@@ -15,5 +15,12 @@
                 </td>
             </tr>
         </table>
+        
+        <table align="center">
+                <tr>
+                    <td style="font-style: italic; color: blue;">${message}</td>
+                </tr>
+       	</table>
+        
 </body>
 </html>
