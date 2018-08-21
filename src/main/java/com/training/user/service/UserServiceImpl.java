@@ -50,9 +50,9 @@ public class UserServiceImpl implements UserService{
 		
 		if( currentUser != null ) {
 			
-			final String fromEmail = "www.anirban.mukherjee@gmail.com";
+			final String fromEmail = "shravanbossu@gmail.com	";
 			
-			final String password = "Ani96@773";
+			final String password = "lavadekebaal";
 			
 			final String subject = "Reset Password Link";
 			

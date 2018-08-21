@@ -28,5 +28,7 @@
 	<bean id="customValidator" class="validation.CustomValidator"></bean>
 	
 	<bean id="emailIDValidator" class="validation.EmailIDValidator"></bean>
+	
+	<bean id="passwordUtil" class="Utility.PasswordUtility"></bean>
 
 </beans>
