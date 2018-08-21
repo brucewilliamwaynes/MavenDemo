@@ -1,11 +1,19 @@
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 
 <%@ page language="java" contentType="text/html; charset=US-ASCII"
     pageEncoding="US-ASCII"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+	<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+	<spring:url value="/css/login.css" var="loginCSS" />
+	
+	<link href="${loginCSS}" rel="stylesheet" />
+	
+	
+	
 <title>Login</title>
 </head>
 <body>
@@ -30,14 +38,14 @@
                     <tr>
                         <td></td>
                         <td align="left">
-                            <form:button id="login" name="login">Login</form:button>
+                            <form:button id="login" name="login" >Login</form:button>
                         </td>
                     </tr>
                     <tr></tr>
                     <tr>
-                        <td><a href="home.jsp">Home</a>
-                        <td><a href="forgetPassword">Forgot Password</a></td>
-                        </td>
+                        <td><a href="home">Home</a>
+                        <td><a href="forgetPassword" >Forgot Password</a></td>
+                
                     </tr>
                 </table>
             </form:form>
