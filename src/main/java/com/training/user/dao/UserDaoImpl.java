@@ -17,6 +17,8 @@ import com.training.user.model.EmailID;
 import com.training.user.model.Login;
 import com.training.user.model.User;
 
+import Utility.PasswordUtility;
+
 /**
  * @author bridgelabz
  *
@@ -24,13 +26,40 @@ import com.training.user.model.User;
 public class UserDaoImpl implements UserDao{
 
 	@Autowired
-	  DataSource datasource;
+	PasswordUtility passwordUtil;
+	
+	
+	@Autowired
+	DataSource datasource;
 	
 	
 	  @Autowired
 	  JdbcTemplate jdbcTemplate;
 	  
 	  public void register(User user) {
+		
+		
+		String safePassword;
+		
+		try {
+		
+			passwordUtil = new PasswordUtility();
+			
+			safePassword = passwordUtil.encrypt( user.getPassword() );
+			
+			user.setPassword(safePassword);
+		
+		} 
+		
+		catch (Exception e) {
+		
+			e.printStackTrace();
+		
+		}  
+		  
+		
+		  
+		  
 		  
 	    String sql = "insert into users values(?,?,?,?,?,?,?)";
 	    
@@ -47,9 +76,11 @@ public class UserDaoImpl implements UserDao{
 	    
 	  }
 	  
-	    public User validateUser(Login login) {
+	    public User validateUser(Login login) {	
 	    	
-	    String sql = "select * from users where username='" + login.getUsername() + "' and password='" + login.getPassword() + "'";
+	    String safePassword = passwordUtil.encrypt( login.getPassword()  );
+	    	
+	    String sql = "select * from users where username='" + login.getUsername() + "' and password='" + safePassword + "'";
 	    
 	    List<User> users = jdbcTemplate.query(sql, new UserMapper());
 	    
@@ -100,6 +131,8 @@ public class UserDaoImpl implements UserDao{
 
 		public void savePassword(String username, String newPassword) {
 			// Update new Password To DB
+			
+			newPassword = passwordUtil.encrypt( newPassword ); 
 			
 			String query = "update users set password = '" + newPassword + "', token = " + null + "  where username = '" + username + "';";
 			
